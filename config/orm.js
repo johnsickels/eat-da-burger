@@ -14,18 +14,24 @@ var orm = {
     },
     // insertOne()
     insertOne: function (burgerName, cb) {
-        var queryString = "INSERT INTO burgers (burger_name) VALUES (";
+        var queryString = 'INSERT INTO burgers (burger_name) VALUES ("';
         queryString += burgerName;
-        querystring += ")";
+        queryString += '")';
+
+        console.log(queryString);
+        
         connection.query(queryString, function (err, result) {
             if (err) throw err;
             cb(result);
         });
     },
     // updateOne()
-    updateOne: function (burgerName, cb) {
-        var queryString = "UPDATE burgers SET devoured = true WHERE burger_name = ";
-        queryString += burgerName + '"';
+    updateOne: function (burgerId, cb) {
+        var queryString = "UPDATE burgers SET devoured = 1 WHERE id = ";
+        queryString += burgerId;
+
+        console.log(queryString);
+        
         connection.query(queryString, function (err, result) {
             if (err) throw err;
             cb(result);
