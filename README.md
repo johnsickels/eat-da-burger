@@ -30,4 +30,6 @@ In this assignment, I will create a burger logger with MySQL, Node, Express, Han
 
 ### Eat Da Burger Links
 
-![Eat-Da-Burger](public/assets/img/user-thumb.jpg)
+[Eat-Da-Burger Heroku](https://eat-da-burger-sickels.herokuapp.com/)
+
+![Eat-Da-Burger](public/assets/img/user-thumb.png)
