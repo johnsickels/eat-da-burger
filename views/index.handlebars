@@ -33,6 +33,7 @@
             {{#each burgers}}
             {{#unless devoured}}
             <li>
+                {{id}}.
                 {{burger_name}}
                 <button class="change-devoured" data-id="{{id}}" data-devoured="{{devoured}}">
                     Devour It!
@@ -44,7 +45,7 @@
     </div>
 
     <div class="col">
-        <img src="/assets/img/burger.png" alt="burger" width="75%">
+        <img src="/assets/img/burger.png" id="burger_img" alt="burger" width="75%">
     </div>
 
     <div class="col">
@@ -54,7 +55,9 @@
             {{#each burgers}}
             {{#if devoured}}
             <li>
+                {{id}}. 
                 {{burger_name}}
+                <img src="/assets/img/x.png" id="delete" alt="delete" width="20px" data-id="{{id}}">
             </li>
             {{/if}}
             {{/each}}
