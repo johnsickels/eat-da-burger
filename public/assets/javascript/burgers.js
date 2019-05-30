@@ -19,7 +19,7 @@ $(function() {
       );
     });
 
-    $("#delete").on("click", function(event) {
+    $(".delete").on("click", function(event) {
       var id = $(this).data("id");
       console.log("onclick id=" + id);
       
